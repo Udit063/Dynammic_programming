@@ -1,4 +1,4 @@
-# Fibonacci Series Through Memoization DP approach
+# Fibonacci Series Through Memoization approach
 
 ## Approach
 

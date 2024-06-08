@@ -1,4 +1,4 @@
-# Fibonacci Series Through Tabulation DP approach
+# Fibonacci Series Through Tabulation approach
 
 ## Approach
 
