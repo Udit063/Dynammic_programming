@@ -2,7 +2,7 @@
 
 ## Approach
 
-**Memoization is used to store values in an array so that we do not have to calculate them again.**
+**Memoization is the technique in which values are stored in an array so that we do not have to calculate them again.**
 
 1. Create an array to store the values and initialize with '-1'.
 2. Whenever you calculate a value, store it in the array.
@@ -26,6 +26,6 @@ return dp[n];
 }
 ```
 
-**Time Complexity** O(N)
+**Time Complexity** O(n)
 
-**Space Complexity** O(N)
+**Space Complexity** O(n)
