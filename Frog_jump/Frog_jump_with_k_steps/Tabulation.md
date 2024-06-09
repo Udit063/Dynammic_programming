@@ -29,3 +29,11 @@ Now for rest of the indexes, generate a loop and make a nested loop for the no o
 **TC:** O(n\*k)
 
 **SC:** O(n)
+
+# Frog Jump with k steps Through Space Optimization approach
+
+## Approach
+
+First of all, no. of variables to be declared will be 'k' last values. Like for 2 steps, dp[i-1] and dp[i-2] will be required, whereas for 3 steps, dp[i-3] will also be required.
+
+If (k==n), then in worst case, space occupied will be O(n). Hence, **It is not necessary for space optimization**
