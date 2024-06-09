@@ -1,4 +1,4 @@
-# Frog Jump Question Through SPace Optimization approach
+# Frog Jump Question Through Space Optimization approach
 
 ## Approach
 
