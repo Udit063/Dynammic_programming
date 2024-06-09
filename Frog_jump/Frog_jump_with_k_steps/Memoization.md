@@ -28,6 +28,6 @@ For (i+1), (i+2) ,....., (i+k) no. of steps, just circulate through the loop 'k'
 
 ```
 
-**TC:** O(n \* k)
+**TC:** O(n\*k)
 
 **SC:** O(n)
