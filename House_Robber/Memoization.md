@@ -1,4 +1,4 @@
-# House Robber Problem with memoization problem
+# House Robber Problem with Memoization Approach
 
 ## Approach
 
