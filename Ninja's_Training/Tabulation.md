@@ -31,6 +31,6 @@ For tabulation (down-top), we will first declare the dp array as in memoization.
     }
 ```
 
-**TC:** O((n*4)*3)
+**TC:** O(n*4*3)
 
-**SC:** O(n) + O(n\*4)
+**SC:** O(n\*4)

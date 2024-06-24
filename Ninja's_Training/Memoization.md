@@ -41,6 +41,6 @@ Hence, we will use **recursion**, and we will go through each days for all the t
     }
 ```
 
-**TC:** O((n*4)*3)
+**TC:** O(n*4*3)
 
 **SC:** O(n) + O(n\*4)
