@@ -1,4 +1,4 @@
-# Unique path find Problem in 2D with Tabulation Approach
+# Unique path find Problem in 2D with Space Optimization Approach
 
 ## Approach
 
