@@ -5,7 +5,7 @@
 Since, we have to find all the possible ways to go from **(0,0)** to **(m-1, n-1)**. So, we will use recursion here. Also, there are only two ways, to go **right** or to go **down**. If we start from the end, then it's just the opposite, up and left.
 
 We have two variables **(rows and cols)** to express it instead of indexes.
-Now for performing the stuff, we have two paths, to go up or to go left. Then, find the min of the up and left to find the min path sum and add it to the current cell.
+Now for performing the stuff, we have two paths, to go up or to go left. Then, find the **min** of the up and left to find the min path sum and **add** it to the current cell.
 
 For memoization, declare a dp 2D array and initialize with -1. Just call it before going up or left and at last store the sum in the 2D array.
 
