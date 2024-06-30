@@ -3,7 +3,7 @@
 ## Approach
 
 If there is prev row & prev col, we can optimize it.
-Since, it is **dp[i][j]=dp[i-1][j] + dp[i][j-1]**, hence, we can see that, we only require the previous element and the previous row.
+Since, it is **dp[i-1][j] & dp[i][j-1]**, hence, we can see that, we only require the previous element and the previous row.
 So, we will declare two arrays, one denoting the previous array while other will be denoting current array and we will update the prev to curr on each next row.
 
 ## Code
