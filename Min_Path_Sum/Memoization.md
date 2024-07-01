@@ -7,7 +7,7 @@ Since, we have to find all the possible ways to go from **(0,0)** to **(m-1, n-1
 We have two variables **(rows and cols)** to express it instead of indexes.
 Now for performing the stuff, we have two paths, to go up or to go left. Then, find the **min** of the up and left to find the min path sum and **add** it to the current cell.
 
-For memoization, declare a dp 2D array and initialize with -1. Just call it before going up or left and at last store the sum in the 2D array.
+For memoization, declare a dp 2D array and initialize with -1. Just check it before going up or left and at last store the sum in the 2D array.
 
 ## Code
 
