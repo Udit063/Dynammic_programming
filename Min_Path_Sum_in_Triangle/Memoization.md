@@ -27,6 +27,8 @@ For **memoization**, declare a dp 2D array and initialize with -1. Just check it
     }
 ```
 
-**TC:** 2\*\*(1+2+3+.....+n)
+**TC:** O(n\*n)
 
-**SC:** O(n)
+**SC:** O(n) + O(n\*n)
+
+ <!-- recursion stack space -->
