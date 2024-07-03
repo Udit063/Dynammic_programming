@@ -39,6 +39,6 @@ For Base cases
     }
 ```
 
-**TC:** O(3^n)
+**TC:** O(n\*m)
 
-**SC:** O(n)
+**SC:** O(n) + O(n\*m)
