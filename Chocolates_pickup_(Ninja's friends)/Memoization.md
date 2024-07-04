@@ -20,13 +20,17 @@ It means that we have total 9 combo paths to check. Either manually add all 9 pa
 
 ```c++
     int f(int i, int j1, int j2, vector<vector<int>>& grid, int n, int m, vector<int> a, vector<vector<vector<int>>>& dp){
-        if(j1<0 || j1 >=m || j2<0 || j2>=m) return -1e8;
+        if(j1<0 || j1 >=m || j2<0 || j2>=m) return -1e8; // not INT_MIN, so that doesn't get beyond INT_MIN when added
+
         if(i==(n-1)){
             if(j1==j2) return grid[i][j1]; // when destination is same
             else return grid[i][j1] + grid[i][j2];
         }
+
         if(dp[i][j1][j2] != -1) return dp[i][j1][j2];
+
         int maxi=INT_MIN;
+
         for(int k=0; k<3;k++){
             for(int l=0;l<3;l++){
                 if(j1==j2) maxi = max(maxi, grid[i][j1] + f(i+1, j1+a[k], j2+a[l], grid, n, m, a, dp));
