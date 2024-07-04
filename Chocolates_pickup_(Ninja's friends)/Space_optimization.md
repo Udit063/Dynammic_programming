@@ -1,23 +1,24 @@
-# Chocolates Pickup (Ninja's friends) Problem with Tabulation Approach
+# Chocolates Pickup (Ninja's friends) Problem with Space Optimization Approach
 
 ## Approach
 
-(Top -> down => opposite of recursion)
+For **2D array**, we require **1D array** for space optimization. Hence, for **3D array**, we will require **2D array** for space optimization.
 
-For tabulation, there will be multiple base cases, like for an ending point of alice **(0 -> m-1)** there will be **(0-> m-1)** cases for bob. Rest, logic will be same as done for memoization.
+Also, we can see that, we are required with the **current row (d[i][][])** and the **front ro (d[i+1][][])w** for computation, hence, we will be required with **2 - 2D arrays**.
 
 ## Code
 
 ```c++
     int solve(int n, int m, vector<vector<int>>& grid) {
-        vector<vector<vector<int>>> dp(n, vector<vector<int>>(m, vector<int>(m,0)));
+        vector<vector<int>> front(m, vector<int>(m,0));
+        vector<vector<int>> curr(m, vector<int>(m,0));
 
         for (int j1 = 0; j1 < m; j1++) {
             for (int j2 = 0; j2 < m; j2++) {
                 if (j1 == j2)
-                    dp[n - 1][j1][j2] = grid[n - 1][j1];
+                    front[j1][j2] = grid[n - 1][j1];
                 else
-                    dp[n - 1][j1][j2] = grid[n - 1][j1] + grid[n - 1][j2];
+                    front[j1][j2] = grid[n - 1][j1] + grid[n - 1][j2];
             }
         }
 
@@ -34,7 +35,7 @@ For tabulation, there will be multiple base cases, like for an ending point of a
                                 value = grid[i][j1] + grid[i][j2];
 
                             if (j1 + k >= 0 && j1 + k < m && j2 + l >= 0 && j2 + l < m) {
-                                value += dp[i + 1][j1 + k][j2 + l];
+                                value += front[j1 + k][j2 + l];
                             } else {
                                 value += -1e8;
                             }
@@ -42,14 +43,15 @@ For tabulation, there will be multiple base cases, like for an ending point of a
                             maxi = max(maxi, value);
                         }
                     }
-                dp[i][j1][j2] = maxi;
+                    curr[j1][j2] = maxi;
                 }
             }
+            front = curr;
         }
-        return dp[0][0][m - 1];
+        return front[0][m - 1];
     }
 ```
 
 **TC:** O((n\*m*m) * 9)
 
-**SC:** O(n\*m\*m)
+**SC:** O(m\*m)
