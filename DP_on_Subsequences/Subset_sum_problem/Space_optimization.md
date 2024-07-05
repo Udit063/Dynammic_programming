@@ -12,7 +12,7 @@ Since, we can see in tabulation, we require **d[ind-1][]** and **dp[ind][]**, me
         vector<bool> prev(sum+1, 0), curr(sum+1, 0);
 
         prev[0] = curr[0] = true;
-        prev[arr[0]]=true;
+        if(arr[0] <= sum) prev[arr[0]]=true;
 
         for(int i=1; i<n; i++){
             for(int target=1; target <= sum; target++){
@@ -28,6 +28,6 @@ Since, we can see in tabulation, we require **d[ind-1][]** and **dp[ind][]**, me
     }
 ```
 
-**TC:** O((n\*sum))
+**TC:** O(n\*sum)
 
 **SC:** O(sum)
