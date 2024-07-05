@@ -37,6 +37,6 @@ At last, return **dp[n-1][sum]** what we had passed in recursion.
     }
 ```
 
-**TC:** O((n\*target))
+**TC:** O((n\*sum))
 
-**SC:** O(n\*target)
+**SC:** O(n\*sum)

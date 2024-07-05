@@ -33,6 +33,6 @@ For **memoization**, we will be required for a **2D array -> dp[n][target]** and
     }
 ```
 
-**TC:** O((n\*target))
+**TC:** O((n\*sum))
 
-**SC:** O(n) + O(n\*target)
+**SC:** O(n) + O(n\*sum)
