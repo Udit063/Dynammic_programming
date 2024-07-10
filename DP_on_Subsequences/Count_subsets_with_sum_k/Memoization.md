@@ -8,10 +8,10 @@ Since, we need to find all possible ways or all the subsets whose **sum=k**, so,
 
 ```c++
     int f(int ind, int sum, int arr[], vector<vector<int>>& dp){
-	    if(sum==0) return 1;
-	    if(ind==0){
-	        if(sum==arr[0]) return 1;
-	        else return 0;
+	    if(ind==0) {
+	        if(sum == 0 && arr[0] == 0) return 2;
+	        if(sum == 0 || sum == arr[0]) return 1;
+	        return 0;
 	    }
 
 	    if(dp[ind][sum] != -1) return dp[ind][sum];
