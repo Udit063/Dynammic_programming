@@ -2,9 +2,7 @@
 
 ## Approach
 
-Since, we can see in tabulation, we require **d[ind-1][]** and **dp[ind][]**, means the **prev** and **curr** row respectively. Hence, we can space optimize it using 2 **1D arrays**, prev and curr and make sure that for both the first value should be true at index 0 as we have declared in tabulation to fill all.
-
-For the base case, we can see that **index 0** of every row is **1** in tabulation, so we will make our first element as 1.
+Just same as the count subset problem with sum k and rest calculations as done in memoization.
 
 ## Code
 
