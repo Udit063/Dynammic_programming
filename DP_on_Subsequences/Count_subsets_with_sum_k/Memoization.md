@@ -25,7 +25,6 @@ Since, we need to find all possible ways or all the subsets whose **sum=k**, so,
 
 	int perfectSum(int arr[], int n, int sum)
 	{
-        // Your code goes here
         vector<vector<int>> dp(n, vector<int>(sum+1, -1));
         return f(n-1, sum, arr, dp);
 	}
