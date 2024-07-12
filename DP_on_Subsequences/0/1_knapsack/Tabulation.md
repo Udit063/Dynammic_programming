@@ -13,28 +13,25 @@ For base case, **when(ind == 0), if(wt[0] <= w)**, then only return or take the 
 ## Code
 
 ```c++
-    int f(int ind, int w, vector<int>& val, vector<int>& wt, vector<vector<int>>& dp){
-        if(ind == 0){
-            if(wt[0] <= w) return val[0];
-            else return 0;
-        }
-        if(dp[ind][w] != -1) return dp[ind][w];
-        int not_take = 0 + f(ind-1, w, val, wt);
-        int take = INT_MIN;
-        if(wt[ind] <= w) take = val[ind] + f(ind-1, w-wt[ind], val, wt);
-
-        return dp[ind][w] = max(not_take, take);
-
-    }
-
     // g -> values and s -> weight
-    int findContentChildren(vector<int>& g, vector<int>& s, int maxWt) {
+    int findContentChildren(vector<int>& val, vector<int>& wt, int maxWt) {
         int n=g.size();
         vector<vector<int>> dp(, vector<int> (maxWt+1, -1));
-        return f(n-1, maxWt, g, s, dp);
+
+        for(int w=wt[0]; w<= maxWt; w++) dp[0][w]=val[0];
+
+        for(int ind = 1; ind<n; ind++){
+            for(int w=0; w<=maxWt; w++){
+                int not_take = 0 + dp[ind-1][w];
+                int take = INT_MIN;
+                if(wt[ind] <= w) take = val[ind] + dp[ind-1][w-wt[ind]];
+                dp[ind][w] = max(not_take, take)
+            }
+        }
+        return dp[n-1][maxWt];
     }
 ```
 
 **TC:** O(n\*w)
 
-**SC:** O(n) + O(n\*w)
+**SC:** O(n\*w)
