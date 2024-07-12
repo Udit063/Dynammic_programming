@@ -30,7 +30,7 @@ For base case, **when(ind == 0), if(wt[0] <= w)**, then only return or take the 
     // g -> values and s -> weight
     int findContentChildren(vector<int>& g, vector<int>& s, int maxWt) {
         int n=g.size();
-        vector<vector<int>> dp(, vector<int> (maxWt+1, -1));
+        vector<vector<int>> dp(n, vector<int> (maxWt+1, -1));
         return f(n-1, maxWt, g, s, dp);
     }
 ```
