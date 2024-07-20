@@ -1,4 +1,4 @@
-# Edit DIstance Problem using Tabulation Approach
+# Edit Distance Problem using Tabulation Approach
 
 ## Approach
 
