@@ -18,7 +18,7 @@ For **base case**, whenever the array ends, means we have nothing left, neither 
 
 Since, it will create an **overlapping subproblem**, hence, we will use **memoization**.
 
-For memoization, just take a **dp[n][m]** array and store the result in this array. Also, check if any value exists in this array before moving forward.
+For memoization, just take a **dp[n][2]** array and store the result in this array. Also, check if any value exists in this array before moving forward.
 
 ## Code
 
