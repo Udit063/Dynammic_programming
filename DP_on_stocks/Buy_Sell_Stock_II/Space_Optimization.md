@@ -1,4 +1,4 @@
-# Buy and Sell Stock II using using Space Optimization Approach
+# Buy and Sell Stock II using Space Optimization Approach
 
 ## Approach
 
