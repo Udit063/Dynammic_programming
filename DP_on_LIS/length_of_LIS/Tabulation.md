@@ -12,7 +12,7 @@ For Tabulation:-
 2. Make the **for** loop for changing variable **((n-1 -> 0) for ind & (ind-1 -> -1) for prev_ind)**. Since, **prev_ind** is **just before** element, hence we will initialize it with **(ind-1)**
 3. Copy recursion & modify it. Also, don't forget to do **coordinate shifting**.
 
-For Base case, when **(ind == n)**, return 0; **Base case => dp[n][prev] = 0**
+For Base case, when **(ind == n)**, return 0.
 
 ## Code
 
